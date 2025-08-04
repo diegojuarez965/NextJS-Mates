@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="text"]:focus {
+  border: 2px solid theme('colors.greenMate');
+  box-shadow: none;
+}
+
+input[type="number"]:focus {
+  border: 2px solid theme('colors.greenMate');
+  box-shadow: none;
+}
+
+input[type="email"]:focus {
+  border: 2px solid theme('colors.greenMate');
+  box-shadow: none;
+}
+
+input[type="password"]:focus {
+  border: 2px solid theme('colors.greenMate');
+  box-shadow: none;
+}
+
+textarea:focus {
+  border: 2px solid theme('colors.greenMate');
+  box-shadow: none;
+}
+
+@layer utilities {
+  .fade-in {
+    animation: fadeInUp 0.4s ease-out;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

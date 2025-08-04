@@ -1,0 +1,21 @@
+{
+  "name": "Mates El Sureño Universitario",
+  "short_name": "Mates ESU",
+  "description": "Mates El Sureño Universitario PWA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#99B898",
+  "theme_color": "#ffff",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
