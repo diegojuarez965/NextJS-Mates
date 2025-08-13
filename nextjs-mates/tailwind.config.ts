@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         greenMate: '#99B898',
+        greenMateButton: '#3F5E4B',
         greenMateTransparent: '#99B898CC',
         greenMateNeon: '#5C9933',
         carbon:   '#2A363B'

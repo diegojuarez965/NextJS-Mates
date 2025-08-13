@@ -126,14 +126,14 @@ export default function Form() {
         <div className="w-64 space-y-2">
           <label className="block text-sm font-medium text-gray-700">Estado</label>
           <Listbox name="estado" value={selected} onChange={setSelected}>
-            <Listbox.Button className="bg-greenMateTransparent text-white p-2 rounded w-full capitalize hover:opacity-80" aria-describedby='estado-error'>
+            <Listbox.Button className="bg-greenMateButton text-white p-2 rounded w-full capitalize hover:opacity-80" aria-describedby='estado-error'>
               {selected}
             </Listbox.Button>
             <Listbox.Options className="bg-white rounded shadow-md mt-1">
               <Listbox.Option
                 value="disponible"
                 className={({ active }) =>
-                  `cursor-pointer px-4 py-2 ${active ? 'bg-greenMateTransparent text-white' : 'text-black'
+                  `cursor-pointer px-4 py-2 ${active ? 'bg-greenMateButton text-white' : 'text-black'
                   }`
                 }
               >
@@ -142,7 +142,7 @@ export default function Form() {
               <Listbox.Option
                 value="dado de baja"
                 className={({ active }) =>
-                  `cursor-pointer px-4 py-2 ${active ? 'bg-greenMateTransparent text-white' : 'text-black'
+                  `cursor-pointer px-4 py-2 ${active ? 'bg-greenMateButton text-white' : 'text-black'
                   }`
                 }
               >
@@ -181,7 +181,7 @@ export default function Form() {
           <button
             type="button"
             onClick={openWidget}
-            className="inline-block rounded bg-greenMate px-4 py-2 text-white text-sm hover:bg-green-700 transition-colors"
+            className="inline-block rounded bg-greenMateButton px-4 py-2 text-white text-sm hover:bg-green-700 transition-colors"
           >
             Subir Imágen
           </button>
@@ -203,7 +203,7 @@ export default function Form() {
           >
             Cancelar
           </Link>
-          <Button type="submit">Crear Mate</Button>
+          <Button type="submit" className="bg-greenMateButton">Crear Mate</Button>
         </div>
 
       </div >

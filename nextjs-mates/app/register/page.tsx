@@ -14,7 +14,7 @@ export default function RegisterPage() {
       <div className="mt-6 text-center">
         <Link
           href="/elsurenouniversitario/clientes"
-          className="inline-block rounded-md bg-greenMate px-4 py-2 text-white font-medium hover:opacity-80"
+          className="inline-block rounded-md bg-greenMateButton px-4 py-2 text-white font-medium hover:opacity-80"
         >
           ← Volver al inicio
         </Link>

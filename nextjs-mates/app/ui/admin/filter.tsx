@@ -36,7 +36,7 @@ export default function Filter() {
     <div className="flex flex-col items-center rounded-lg">
       <button
         onClick={() => setOpenFilter(!openFilter)}
-        className="bg-greenMate text-white py-2 px-4 rounded-lg hover:opacity-80"
+        className="bg-greenMateButton text-white py-2 px-4 rounded-lg hover:opacity-80"
       >
         {openFilter ? 'Ocultar Filtros' : 'Mostrar Filtros'}
       </button>
@@ -123,14 +123,14 @@ export default function Filter() {
             <label className="text-sm text-carbon mb-1">Estado</label>
             <Listbox name="estado" value={estado} onChange={setEstado}>
               <div className="relative">
-                <Listbox.Button className="w-full bg-greenMateTransparent text-white p-2 rounded capitalize hover:opacity-80">
+                <Listbox.Button className="w-full bg-greenMateButton text-white p-2 rounded capitalize hover:opacity-80">
                   {estado}
                 </Listbox.Button>
                 <Listbox.Options className="absolute w-full bg-white rounded shadow-md mt-1">
                   <Listbox.Option
                     value="disponible"
                     className={({ active }) =>
-                      `cursor-pointer px-2 py-2 ${active ? 'bg-greenMateTransparent text-white' : 'text-black'}`
+                      `cursor-pointer px-2 py-2 ${active ? 'bg-greenMateButton text-white' : 'text-black'}`
                     }
                   >
                     Disponible
@@ -138,7 +138,7 @@ export default function Filter() {
                   <Listbox.Option
                     value="dado de baja"
                     className={({ active }) =>
-                      `cursor-pointer px-2 py-2 ${active ? 'bg-greenMateTransparent text-white' : 'text-black'}`
+                      `cursor-pointer px-2 py-2 ${active ? 'bg-greenMateButton text-white' : 'text-black'}`
                     }
                   >
                     Dado de Baja

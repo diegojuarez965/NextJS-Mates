@@ -70,7 +70,7 @@ export default function LoginForm() {
           </div>
         </div>
         <input type="hidden" name="redirectTo" value={callbackUrl} />
-        <Button className="mt-4 w-full" aria-disabled={isPending}>
+        <Button className="mt-4 w-full bg-greenMateButton" aria-disabled={isPending}>
           Iniciar sesión <ArrowRightIcon className="ml-auto h-5 w-5 text-gray-50" />
         </Button>
         <div

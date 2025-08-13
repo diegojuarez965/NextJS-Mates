@@ -38,9 +38,10 @@ export default function SideNav({ isLogged }: sideNavProps) {
           <div className="flex space-x-2 md:hidden px-4">
             <Link
               href="/register"
+              aria-label="Registrar usuario"
               className="flex-1 flex items-center justify-center gap-2 rounded-full bg-white text-greenMate"
             >
-              <UserPlusIcon className="h-7 w-7 text-greenMate" />
+              <UserPlusIcon className="h-7 w-7 text-greenMate" aria-hidden="true" />
             </Link>
           </div>
         )}
@@ -54,8 +55,8 @@ export default function SideNav({ isLogged }: sideNavProps) {
                 await signOut({ redirectTo: '/' });
               }}
             >
-              <button className="flex h-[48px] w-full grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-greenMateTransparent hover:text-greenMateNeon md:flex-none md:justify-start md:p-2 md:px-3">
-                <PowerIcon className="w-6" />
+              <button aria-label="Cerrar sesión" className="flex h-[48px] w-full grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-greenMateTransparent hover:text-greenMateNeon md:flex-none md:justify-start md:p-2 md:px-3">
+                <PowerIcon className="w-6" aria-hidden="true" />
                 <div className="hidden md:block">Cerrar Sesión</div>
               </button>
             </form>

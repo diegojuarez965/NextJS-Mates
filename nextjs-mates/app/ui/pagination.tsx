@@ -78,7 +78,7 @@ function PaginationNumber({
     {
       'rounded-l-md': position === 'first' || position === 'single',
       'rounded-r-md': position === 'last' || position === 'single',
-      'z-10 bg-greenMate border-greenMate text-white': isActive,
+      'z-10 bg-greenMateButton border-greenMateButton text-white': isActive,
       'hover:bg-gray-100': !isActive && position !== 'middle',
       'text-gray-300': position === 'middle',
     },
@@ -114,15 +114,28 @@ function PaginationArrow({
 
   const icon =
     direction === 'left' ? (
-      <ArrowLeftIcon className="w-4" />
+      <ArrowLeftIcon className="w-4" aria-hidden="true" />
     ) : (
-      <ArrowRightIcon className="w-4" />
+      <ArrowRightIcon className="w-4" aria-hidden="true" />
     );
 
-  return isDisabled ? (
-    <div className={className}>{icon}</div>
-  ) : (
-    <Link className={className} href={href}>
+  const ariaLabel = direction === 'left' ? 'Página anterior' : 'Página siguiente';
+
+  if (isDisabled) {
+    return (
+      <button
+        className={className}
+        aria-label={ariaLabel}
+        disabled
+        type="button"
+      >
+        {icon}
+      </button>
+    );
+  }
+
+  return (
+    <Link className={className} href={href} aria-label={ariaLabel}>
       {icon}
     </Link>
   );

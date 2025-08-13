@@ -66,15 +66,15 @@ export default function ChatBox() {
                         <div key={index} className={`flex ${isUser ? 'justify-end' : 'justify-start'}`}>
                             <div className="relative max-w-[75%] break-words">
                                 <div
-                                    className={`px-4 py-2 rounded-lg text-white text-sm bg-greenMate ${isUser ? 'rounded-br-none text-right' : 'rounded-bl-none text-left'
+                                    className={`px-4 py-2 rounded-lg text-white text-sm bg-greenMateButton ${isUser ? 'rounded-br-none text-right' : 'rounded-bl-none text-left'
                                         }`}
                                 >
                                     {msg.content}
                                 </div>
                                 <div
                                     className={`absolute top-2 ${isUser
-                                        ? 'right-[-8px] border-t-8 border-b-8 border-t-transparent border-b-transparent border-l-8 border-l-greenMate'
-                                        : 'left-[-8px] border-t-8 border-b-8 border-t-transparent border-b-transparent border-r-8 border-r-greenMate'
+                                        ? 'right-[-8px] border-t-8 border-b-8 border-t-transparent border-b-transparent border-l-8 border-l-greenMateButton'
+                                        : 'left-[-8px] border-t-8 border-b-8 border-t-transparent border-b-transparent border-r-8 border-r-greenMateButton'
                                         }`}
                                 ></div>
                             </div>
@@ -83,7 +83,7 @@ export default function ChatBox() {
                 })}
                 {loading && (
                     <div className="flex justify-start">
-                        <div className="bg-greenMate text-white text-sm px-4 py-2 rounded-lg">
+                        <div className="bg-greenMateButton text-white text-sm px-4 py-2 rounded-lg">
                             Pensando sobre mates...
                         </div>
                     </div>
@@ -102,17 +102,18 @@ export default function ChatBox() {
                 />
                 <button
                     onClick={handleSend}
-                    className="bg-greenMate hover:opacity-80 text-white px-4 py-2 rounded-lg transition"
+                    className="bg-greenMateButton hover:opacity-80 text-white px-4 py-2 rounded-lg transition"
                     disabled={loading}
+                    aria-label="Enviar consulta"
                 >
-                    <PaperPlaneIcon />
+                    <PaperPlaneIcon aria-hidden="true" />
                 </button>
             </div>
 
             <div className="mt-2 text-center">
                 <button
                     onClick={handleClear}
-                    className="text-base text-greenMate hover:opacity-80 transition"
+                    className="text-base text-greenMateButton hover:opacity-80 transition"
                 >
                     Limpiar chat
                 </button>

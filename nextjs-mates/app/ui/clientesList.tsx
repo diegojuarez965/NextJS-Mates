@@ -94,7 +94,7 @@ export default function ClientesList({ nombre, currentPage }: { nombre: string; 
                       onClick={() => handleSelectClient(c.id)}
                       disabled={loadingVentas && selectedClient === c.id}
                       className={`px-3 py-1 text-sm rounded-lg transition
-                      ${selectedClient === c.id ? 'bg-red-500' : 'bg-greenMate'} 
+                      ${selectedClient === c.id ? 'bg-red-500' : 'bg-greenMateButton'} 
                       ${loadingVentas && selectedClient === c.id ? 'opacity-50 cursor-not-allowed' : 'text-white hover:opacity-90'}`}
                     >
                       {selectedClient === c.id ? 'Cerrar panel' : 'Ver ventas'}
@@ -126,7 +126,7 @@ export default function ClientesList({ nombre, currentPage }: { nombre: string; 
                 onClick={() => handleSelectClient(c.id)}
                 disabled={loadingVentas && selectedClient === c.id}
                 className={`px-3 py-1 text-sm rounded-lg transition
-                ${selectedClient === c.id ? 'bg-red-500' : 'bg-greenMate'} 
+                ${selectedClient === c.id ? 'bg-red-500' : 'bg-greenMateButton'} 
                 ${loadingVentas && selectedClient === c.id ? 'opacity-50 cursor-not-allowed' : 'text-white hover:opacity-90'}`}
               >
                 {selectedClient === c.id ? 'Cerrar panel' : 'Ver ventas'}

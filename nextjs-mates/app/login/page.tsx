@@ -21,7 +21,7 @@ export default function LoginPage() {
           <LoginForm />
         </Suspense>
         <div className="text-center">
-          <Link href="/reset-password" className="text-sm text-greenMate underline hover:opacity-80">
+          <Link href="/reset-password" className="text-sm text-greenMateButton underline hover:opacity-80">
             ¿Olvidaste tu contraseña?
           </Link>
         </div>

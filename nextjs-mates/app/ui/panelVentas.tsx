@@ -27,7 +27,7 @@ export default function PanelVentas({ ventas, items }: Props) {
               <h3 className="text-lg font-bold text-carbon">
                 Venta #{venta.id}
               </h3>
-              <span className="text-xs text-center px-2 py-1 rounded-full bg-greenMate text-white font-semibold">
+              <span className="text-xs text-center px-2 py-1 rounded-full bg-greenMateButton text-white font-semibold">
                 {totalProductos} producto{totalProductos !== 1 ? 's' : ''}
               </span>
             </div>

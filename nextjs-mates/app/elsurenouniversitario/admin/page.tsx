@@ -49,7 +49,7 @@ export default function Page() {
 
                         <Listbox value={meses} onChange={setMeses}>
                             <div className="relative">
-                                <Listbox.Button className="relative w-25 cursor-pointer rounded-md bg-greenMate py-2 pl-4 pr-10 text-left border border-greenMate text-white text-lg hover:opacity-80">
+                                <Listbox.Button className="relative w-25 cursor-pointer rounded-md bg-greenMateButton py-2 pl-4 pr-10 text-left border border-greenMateButton text-white text-lg hover:opacity-80">
                                     {meses} mes{meses > 1 ? 'es' : ''}
                                     <ChevronUpDownIcon
                                         className="absolute right-2 top-1/2 h-5 w-5 -translate-y-1/2 text-white"
@@ -63,14 +63,14 @@ export default function Page() {
                                             key={num}
                                             value={num}
                                             className={({ active }) =>
-                                                `cursor-pointer select-none px-4 py-2 text-lg ${active ? 'bg-greenMate text-white' : 'bg-white text-gray-700'
+                                                `cursor-pointer select-none px-4 py-2 text-lg ${active ? 'bg-greenMateButton text-white' : 'bg-white text-gray-700'
                                                 }`
                                             }
                                         >
                                             {({ selected }) => (
                                                 <span className="flex items-center justify-between">
                                                     {num} mes{num > 1 ? 'es' : ''}
-                                                    {selected && <CheckIcon className="h-5 w-5 text-greenMate" />}
+                                                    {selected && <CheckIcon className="h-5 w-5 text-greenMateButton" />}
                                                 </span>
                                             )}
                                         </Listbox.Option>
@@ -106,7 +106,7 @@ export default function Page() {
                     />
 
                     <button
-                        className="px-4 py-2 bg-greenMate text-white rounded-md hover:bg-green-700"
+                        className="px-4 py-2 bg-greenMateButton text-white rounded-md hover:bg-green-700"
                         onClick={handleSendNotification}
                         disabled={sending}
                     >

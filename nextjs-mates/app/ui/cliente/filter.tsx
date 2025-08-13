@@ -26,7 +26,7 @@ export default function Filter() {
         <div className="flex flex-col items-center rounded-lg">
             <button
                 onClick={() => setOpenFilter(!openFilter)}
-                className="bg-greenMate text-white py-2 px-4 rounded-lg hover:opacity-80"
+                className="bg-greenMateButton text-white py-2 px-4 rounded-lg hover:opacity-80"
             >
                 {openFilter ? 'Ocultar Filtros' : 'Mostrar Filtros'}
             </button>

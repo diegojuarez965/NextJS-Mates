@@ -117,7 +117,7 @@ export function CarritoTable() {
                                                     disabled={isLoading}
                                                     className={`flex items-center gap-2 px-4 py-2 rounded-md shadow transition font-semibold ${isLoading
                                                         ? 'bg-gray-400 cursor-not-allowed'
-                                                        : 'bg-greenMate text-white hover:bg-green-700'
+                                                        : 'bg-greenMateButton text-white hover:bg-green-700'
                                                         }`}
                                                 >
                                                     {isLoading ? (
@@ -149,7 +149,7 @@ export function CarritoTable() {
                                         disabled={isLoading}
                                         className={`flex items-center gap-2 px-4 py-2 rounded-md shadow transition font-semibold ${isLoading
                                             ? 'bg-gray-400 cursor-not-allowed'
-                                            : 'bg-greenMate text-white hover:bg-green-700'
+                                            : 'bg-greenMateButton text-white hover:bg-green-700'
                                             }`}
                                     >
                                         {isLoading ? (

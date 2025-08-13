@@ -77,11 +77,11 @@ export default function ResetPasswordPage() {
           required
         />
         {error && <p className="text-red-600">{error}</p>}
-        {success && <p className="text-greenMate">{success}</p>}
+        {success && <p className="text-greenMateButton">{success}</p>}
         <button
           type="submit"
           disabled={loading}
-          className="bg-greenMate text-white px-4 py-2 rounded hover:opacity-80"
+          className="bg-greenMateButton text-white px-4 py-2 rounded hover:opacity-80"
         >
           {loading ? 'Restableciendo...' : 'Restablecer'}
         </button>

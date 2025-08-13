@@ -12,10 +12,11 @@ export function CreateMate() {
   return (
     <Link
       href="/elsurenouniversitario/admin/mates/create"
-      className="flex h-10 items-center rounded-lg bg-greenMate px-4 text-sm font-medium text-white transition-colors hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-greenMate"
+      className="flex h-10 items-center rounded-lg bg-greenMateButton px-4 text-sm font-medium text-white transition-colors hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-greenMateButton"
+      aria-label="Crear mate"
     >
       <span className="hidden md:block">Crear Mate</span>{' '}
-      <PlusIcon className="h-5 md:ml-4" />
+      <PlusIcon className="h-5 md:ml-4" aria-hidden="true" />
     </Link>
   );
 }
@@ -25,8 +26,9 @@ export function UpdateMate({ id }: { id: string }) {
     <Link
       href={`/elsurenouniversitario/admin/mates/${id}/edit`}
       className="rounded-md border p-2 hover:bg-gray-100 z-10"
+      aria-label="Editar mate"
     >
-      <PencilIcon className="w-5" />
+      <PencilIcon className="w-5" aria-hidden="true" />
     </Link>
   );
 }
@@ -103,7 +105,7 @@ export function AgregarACarrito({ id, isLogged }: { id: string, isLogged: boolea
           <button
             type="button"
             onClick={agregar}
-            className="bg-greenMate text-white px-3 py-2 rounded hover:bg-green-700 transition"
+            className="bg-greenMateButton text-white px-3 py-2 rounded hover:bg-green-700 transition"
           >
             Confirmar
           </button>
@@ -148,7 +150,7 @@ export function VaciarCarrito({ onClear }: { onClear: () => void }) {
   return (
     <button
       type="button"
-      className="flex items-center gap-2 bg-red-400 text-white px-4 py-2 rounded-md shadow hover:bg-red-600 transition font-semibold"
+      className="flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-md shadow hover:opacity-80 transition font-semibold"
       onClick={clear}
     >
       <TrashIcon className="w-5" />

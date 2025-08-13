@@ -34,26 +34,37 @@ export default function ResetPasswordRequestPage() {
     <div className="max-w-md mx-auto mt-20 p-6 bg-white shadow-md rounded-xl">
       <h1 className="text-2xl font-bold mb-4 text-center">Recuperar contraseña</h1>
       {success ? (
-        <p className="text-greenMate text-center">
+        <p className="text-greenMateButton text-center">
           Te enviamos un enlace para restablecer tu contraseña. Revisá tu correo.
         </p>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium">Email</label>
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium"
+            >
+              Email
+            </label>
             <input
+              id="email"
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
               className="w-full mt-1 p-2 border border-gray-300 rounded"
+              aria-describedby={error ? "email-error" : undefined}
             />
           </div>
-          {error && <p className="text-red-500 text-sm">{error}</p>}
+          {error && (
+            <p id="email-error" className="text-red-500 text-sm">
+              {error}
+            </p>
+          )}
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-greenMate text-white py-2 rounded hover:opacity-80"
+            className="w-full bg-greenMateButton text-white py-2 rounded hover:opacity-80"
           >
             {loading ? "Enviando..." : "Enviar enlace de recuperación"}
           </button>

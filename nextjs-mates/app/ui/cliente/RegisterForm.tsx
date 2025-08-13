@@ -77,7 +77,7 @@ export default function RegisterForm() {
       <div>
         <button
           type="submit"
-          className="w-full bg-greenMate text-white p-2 rounded-md hover:opacity-80"
+          className="w-full bg-greenMateButton text-white p-2 rounded-md hover:opacity-80"
         >
           Registrarse
         </button>

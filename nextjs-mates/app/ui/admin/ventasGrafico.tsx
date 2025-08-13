@@ -57,7 +57,7 @@ export function VentasGrafico({
     if (isLoading) return <>{graficoSkeleton}</>;
 
     if (noVentas) return (
-        <div className="text-center text-greenMate mt-6">
+        <div className="text-center text-greenMateButton mt-6">
             No se encontraron ventas.
         </div>
     );
@@ -69,17 +69,17 @@ export function VentasGrafico({
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis
                         dataKey="fecha"
-                        stroke="#99B898"
+                        stroke="#3F5E4B"
                         interval="preserveStartEnd"
                         tickFormatter={(tick) => new Date(tick).toLocaleDateString('es-AR', { timeZone: 'UTC', })}
                     >
                         <Label value="Fecha" offset={-5} position="insideBottom" style={{ fill: 'carbon' }} />
                     </XAxis>
-                    <YAxis stroke="#99B898" tickFormatter={(value) => (value === 0 ? '' : value)}>
+                    <YAxis stroke="#3F5E4B" tickFormatter={(value) => (value === 0 ? '' : value)}>
                         <Label value="Total (ARS)" offset={-20} position="insideTop" style={{ fill: 'carbon' }} />
                     </YAxis>
                     <Tooltip />
-                    <Line type="monotone" dataKey="total" stroke="#99B898" strokeWidth={2} />
+                    <Line type="monotone" dataKey="total" stroke="#3F5E4B" strokeWidth={2} />
                 </LineChart>
             </ResponsiveContainer>
         </div>

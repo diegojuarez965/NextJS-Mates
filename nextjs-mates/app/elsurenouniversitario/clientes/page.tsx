@@ -80,17 +80,12 @@ export default function Page() {
   return (
     <div className="w-full min-h-full px-4 md:px-8 py-6 space-y-10">
       <div className="relative w-full">
-        <motion.h1
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className={`${satisfy.className} text-4xl text-carbon ml-2 mt-2`}>
-        </motion.h1>
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="flex justify-end">
+          className="flex justify-end"
+        >
           {claveClima === "" ? (
             <WeatherAnimationSkeleton />
           ) : (
@@ -119,32 +114,32 @@ export default function Page() {
 
       <div><ChatBox /></div>
 
-      <div className="text-center mt-6 space-y-2">
+      <div className="text-center mt-6 space-y-2" aria-busy={loading}>
         {subscribed ? (
           <button
             onClick={handleUnsubscribe}
             className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-xl transition"
             disabled={loading}
+            aria-label="Cancelar suscripción a notificaciones de ofertas"
           >
             {loading ? 'Cargando...' : 'Desuscribirse'}
           </button>
         ) : (
           <button
             onClick={handleSubscribe}
-            className="bg-greenMate hover:opacity-80 text-white px-4 py-2 rounded-xl transition"
+            className="bg-greenMateButton hover:opacity-80 text-white px-4 py-2 rounded-xl transition"
             disabled={loading}
+            aria-label="Suscribirse a notificaciones de ofertas"
           >
             {loading ? 'Cargando...' : 'Suscribirse a notificaciones'}
           </button>
         )}
-        {error && <p className="text-red-600 text-sm">Error: {error}</p>}
+        {error && (
+          <p className="text-red-600 text-sm" role="alert">
+            Error: {error}
+          </p>
+        )}
       </div>
     </div>
-
-
-
-
-
-
   );
 }
